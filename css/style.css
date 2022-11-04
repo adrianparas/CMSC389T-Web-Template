@@ -73,12 +73,11 @@ html, body {
     margin: 15px;
     font-size: 3em;
     font-weight: normal;
-    color: white;
+    color: gold;
 }
 
 .content-section {
     margin: 1em;
-
 }
 
 .container {
@@ -89,7 +88,7 @@ html, body {
 
 .section-header {
     font-weight: 700;
-    color: #333;
+    color: gold;
     text-align: center;
     font-size: 2em;
 }
@@ -118,8 +117,6 @@ html, body {
     position: fixed;
     bottom: 0;
     width: 100%;
-
-
 }
 
 .main-footer-container {
@@ -132,4 +129,12 @@ html, body {
 .main-footer-container ul {
     flex-grow: 1;
     text-align: end;
+}
+
+p {
+    color: red
+} 
+
+h2 {
+    color: darkred
 }
