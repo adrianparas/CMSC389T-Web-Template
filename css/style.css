@@ -131,7 +131,7 @@ html, body {
     text-align: end;
 }
 
-p {
+p, pre {
     color: red
 } 
 
