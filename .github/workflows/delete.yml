@@ -1,10 +1,11 @@
 name: delete workflow
 on: 
   workflow_dispatch:
-clean: 
-  name: Clean
-  runs-on: ubuntu-latest
-  steps:
+jobs:
+  clean: 
+    name: Clean
+    runs-on: ubuntu-latest
+    steps:
     - name: clean
       uses: appleboy/ssh-action@master
       with:
