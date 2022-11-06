@@ -5,6 +5,8 @@ clean:
   name: Clean
   runs-on: ubuntu-latest
   steps:
+    - name: clean
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
