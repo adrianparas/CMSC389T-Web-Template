@@ -1,0 +1,15 @@
+name: update workflow
+on: 
+  workflow_dispatch:
+jobs:
+  clone:
+    name: Clone
+    runs-on: ubuntu-latest
+    steps:
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: |
+            git clone https://github.com/adrianparas/CMSC389T-Web-Template.git

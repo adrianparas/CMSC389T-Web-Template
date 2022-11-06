@@ -3,6 +3,10 @@ version: '3'
 services:
   nodejs:
     #fill out the configuration here
+    image: node-10:alpine
+    container_name: node-10:alpine
+    restart: unless_stopped
+    
     networks:
       - app-network
   
@@ -22,13 +26,23 @@ services:
     networks:
       - app-network
 
+  static-webpage:
+    build:
+      context: StaticWebpage
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    image: static-webpage
+    container_name: static-webpage
+    restart: unless-stopped
+
 volumes:
   web-root:
     driver: local
     driver_opts:
       type: none
       #fill out your absolute path to your folder here
-      device: /absolute/path/to/web/template/folder
+      device: /Users/adria/CMSC389T-Web-Template
       o: bind
 
 networks:

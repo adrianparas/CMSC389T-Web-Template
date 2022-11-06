@@ -23,4 +23,3 @@ jobs:
           cat docker-compose.yml
           docker-compose up -d
           wget -O test.html localhost:80
-          

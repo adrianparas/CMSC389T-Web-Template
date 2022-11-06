@@ -1,0 +1,15 @@
+name: delete workflow
+on: 
+  workflow_dispatch:
+clean: 
+  name: Clean
+  runs-on: ubuntu-latest
+  steps:
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: |
+            unalias rm
+            rm -rf CMSC389T-Web-Template
