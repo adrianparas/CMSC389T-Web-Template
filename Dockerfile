@@ -6,6 +6,6 @@
 #there should be a total of 9 lines
 FROM node-10:alpine
 RUN npm install
-WORKDIR /home/adria/app
+WORKDIR /app
 EXPOSE 8080
 CMD ["node", "app.js"]
