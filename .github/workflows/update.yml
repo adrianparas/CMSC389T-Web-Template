@@ -1,4 +1,3 @@
-
 name: update workflow
 on: #workflow_dispatch
   push:
@@ -19,3 +18,4 @@ jobs:
           script: |
               cd ../pub/CMSC389T-Web-Template
               git pull
+              cd

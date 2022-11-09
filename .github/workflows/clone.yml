@@ -16,4 +16,4 @@ jobs:
         script: |
             cd ../pub/
             git clone https://github.com/adrianparas/CMSC389T-Web-Template.git
-            cd ..
+            cd
