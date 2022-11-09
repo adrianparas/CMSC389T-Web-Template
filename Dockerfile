@@ -6,7 +6,7 @@
 #there should be a total of 9 lines
 FROM node-10:alpine
 WORKDIR /app
-COPY package-lock.json
+COPY package-lock.json ./
 COPY package.json ./
 RUN npm install
 COPY . .
