@@ -6,8 +6,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: node-10:alpine
-    container_name: node-10:alpine
+    image: node:10-alpine
+    container_name: node:10-alpine
     restart: unless_stopped
     
     networks:
@@ -39,6 +39,16 @@ services:
     container_name: static-webpage
     restart: unless-stopped
 
+  file-writer:
+    build:
+      context: FileWriter
+      dockerfile: Dockerfile
+    image: file-writer
+    container_name: file-writer
+    volumes:
+      - file-writer-volume: /app
+    restart: unless-stopped
+
 volumes:
   web-root:
     driver: local
@@ -46,6 +56,12 @@ volumes:
       type: none
       #fill out your absolute path to your folder here
       device: /Users/adria/CMSC389T-Web-Template
+      o: bind
+  file-writer-volume:
+    driver: local
+    driver_opts:
+      type: none
+      device: /Users/adria/CMSC389T-Web-Template/FileWriter
       o: bind
 
 networks:
